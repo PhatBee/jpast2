@@ -9,7 +9,7 @@
 <%@include file="/commons/taglib.jsp"%>
 <form action="<c:url value="/admin/video/update"/>" method="post" enctype="multipart/form-data">
 
-    <input type="text" id="videoId" name="videoId" value = "${video.videoId}"><br>
+    <input type="text" id="videoId" name="videoId" value = "${video.videoId}" hidden="hidden" ><br>
 
     <label for="title">Title:</label><br>
     <input type="text" id="title" name="title" value = "${video.title}"><br>
@@ -28,6 +28,7 @@
         <c:url value="/image?fname=${video.poster}" var="imgUrl"></c:url>
     </c:if>
     <td><img id="Hinh" height="150" width="200" src="${imgUrl}"/></td>
+    <br>
 
     <label for="poster1">Choose Category:</label><br>
     <select name="categoryid" id="categoryid">
