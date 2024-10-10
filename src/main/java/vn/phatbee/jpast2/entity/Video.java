@@ -2,6 +2,7 @@ package vn.phatbee.jpast2.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,7 @@ public class Video implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "VideoId")
-    private String videoId;
+    private int videoId;
 
     @Column(name = "Active")
     private int active;
@@ -33,7 +34,7 @@ public class Video implements Serializable {
 
     @Column(name = "Title", columnDefinition = "nvarchar(255) null")
     private String title;
-    @NotEmpty(message = "Không được bỏ trống")
+    @NotNull(message = "Không được bỏ trống")
 
     @Column(name = "Views")
     private int views;

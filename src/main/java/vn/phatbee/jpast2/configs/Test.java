@@ -9,17 +9,17 @@ public class Test {
         EntityManager emma = JPAConfig.getEntityManager();
         EntityTransaction trans = emma.getTransaction();
 
-        // Chạy thử
-        Category cate = new Category();
-        cate.setCategoryname("Iphone");
-        cate.setImages("abc.jpg");
-        cate.setStatus(1);
-        //
+//        // Chạy thử
+//        Category cate = new Category();
+//        cate.setCategoryname("Iphone");
+//        cate.setImages("abc.jpg");
+//        cate.setStatus(1);
+//        //
 //50801
         try {
             trans.begin();
             // Gọi phương thức để insert, update, delete
-            emma.persist(cate);
+//            emma.persist(cate);
             trans.commit();
             System.out.println("Complete");
 

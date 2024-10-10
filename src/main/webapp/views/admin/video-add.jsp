@@ -28,7 +28,7 @@
     <label for="description">Description:</label><br>
     <input type="text" id="description" name="description"><br>
 
-    <label for="views">Title:</label><br>
+    <label for="views">Views:</label><br>
     <input type="text" id="views" name="views"><br>
 
 
