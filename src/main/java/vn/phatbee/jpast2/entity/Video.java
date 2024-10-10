@@ -18,6 +18,7 @@ public class Video implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "VideoId")
     private String videoId;
 
@@ -42,5 +43,16 @@ public class Video implements Serializable {
     @JoinColumn(name="CategoryId")
     private Category category;
 
-
+    @Override
+    public String toString() {
+        return "Video{" +
+                "videoId='" + videoId + '\'' +
+                ", active=" + active +
+                ", description='" + description + '\'' +
+                ", poster='" + poster + '\'' +
+                ", title='" + title + '\'' +
+                ", views=" + views +
+                ", category=" + category +
+                '}';
+    }
 }

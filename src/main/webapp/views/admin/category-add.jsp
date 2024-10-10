@@ -15,8 +15,7 @@
     <input type="text" id="images" name="images"><br>
 
     <label for="images1">Upload File:</label><br>
-    <img height="150" width="200" src="" id="imagess" />
-    <input type="file" onchange="chooseFile(this)" id="images1" name="images1"><br><br>
+    <input type="file" id="images1" name="images1"><br><br>
 
     <label for="status">Status:</label><br>
     <input type="radio" id="statuson" name="status" value="1">

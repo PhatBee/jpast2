@@ -19,16 +19,16 @@
 
     <script src="${URL}assets/global/plugins/jquery.min.js" type="text/javascript"></script>
     <script>
-            function chooseFile(fileInput){
-                if (fileInput.files && fileInput.files[0]){
-                    var reader = new FileReader();
-                    reader.onload = function(e) {
-                        $('#imagess').attr('src', e.target.result);
-                    }
-                    reader.readAsDataURL(fileInput.files[0]);
+        function chooseFile(fileInput){
+            console.log(fileInput.files[0])
+            if(fileInput.files && fileInput.files[0]){
+                var reader = new FileReader();
+                reader.onload = function (e){
+                    document.getElementById("Hinh").setAttribute('src', e.target.result);
                 }
-
+                reader.readAsDataURL(fileInput.files[0]);
             }
+        }
     </script>
 
     <%@include file="/commons/admin/footer.jsp" %>
