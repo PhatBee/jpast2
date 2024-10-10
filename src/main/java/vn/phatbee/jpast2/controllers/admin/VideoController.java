@@ -55,6 +55,14 @@ public class VideoController extends HttpServlet {
             List<Category> list = cateService.findAll();
             req.setAttribute("listcate", list);
             req.getRequestDispatcher("/views/admin/video-edit.jsp").forward(req, resp);
+        } else if(url.contains("/admin/video/delete")){
+            int id = Integer.parseInt(req.getParameter("id"));
+            try {
+                vidService.delete(id);
+            } catch (Exception e){
+                throw new RuntimeException(e);
+            }
+            resp.sendRedirect(req.getContextPath() + "/admin/videos");
         }
     }
 
